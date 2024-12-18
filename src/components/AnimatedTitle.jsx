@@ -20,5 +20,5 @@ const AnimatedTitle = ({ title, containerClass }) => {
     </div>
   );
 };
-
+ 
 export default AnimatedTitle;
