@@ -46,43 +46,43 @@ const FloatingImage = () => {
 };
 
 const Story = () => {
-  // const frameRef = useRef("null");
+  const frameRef = useRef("null");
 
-  // const handleMouseLeave = () => {
-  //   const element = frameRef.current;
+  const handleMouseLeave = () => {
+    const element = frameRef.current;
 
-  //   gsap.to(element, {
-  //     duration: 0.3,
-  //     rotateX: 0,
-  //     rotateY: 0,
-  //     transformPerspective: 500,
-  //     ease: "power1",
-  //   });
-  // };
+    gsap.to(element, {
+      duration: 0.3,
+      rotateX: 0,
+      rotateY: 0,
+      transformPerspective: 500,
+      ease: "power1",
+    });
+  };
 
-  // const handleMouseMove = (e) => {
-  //   const { clientX, clientY } = e;
-  //   const element = frameRef.current;
+  const handleMouseMove = (e) => {
+    const { clientX, clientY } = e;
+    const element = frameRef.current;
 
-  //   if (!element) return;
+    if (!element) return;
 
-  //   const rect = element.getBoundingClientRect();
-  //   const x = clientX - rect.left;
-  //   const y = clientY - rect.top;
+    const rect = element.getBoundingClientRect();
+    const x = clientX - rect.left;
+    const y = clientY - rect.top;
 
-  //   const centerX = rect.width / 2;
-  //   const centerY = rect.height / 2;
+    const centerX = rect.width / 2;
+    const centerY = rect.height / 2;
 
-  //   const rotateX = ((y - centerY) / centerY) * -10;
-  //   const rotateY = ((x - centerX) / centerX) * 10;
+    const rotateX = ((y - centerY) / centerY) * -10;
+    const rotateY = ((x - centerX) / centerX) * 10;
 
-  //   gsap.to(element, {
-  //     duration: 0.3,
-  //     rotateX,
-  //     rotateY,
-  //     transformPerspective: 500,
-  //     ease: "power1",
-  //   });
+    gsap.to(element, {
+      duration: 0.3,
+      rotateX,
+      rotateY,
+      transformPerspective: 500,
+      ease: "power1",
+    });
   };
   return (
     <section id="story" className="min-h-dvh w-screen bg-black text-blue-50">
@@ -93,7 +93,7 @@ const Story = () => {
         <div className="relative size-full">
           <AnimatedTitle
             title="The St<b>o</b>ry of <br /> a hidden real<b>m</b>"
-            // sectionId="#story"
+            sectionId="#story"
             containerClass="mt-5 pointer-events-none mix-blend-difference relative z-10"
           />
           <div className="story-img-container">
